@@ -6,7 +6,7 @@ namespace Ostatni_świecie
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(" !!! z vs maciej");
+            Console.WriteLine(" !!! z vs");
         }
     }
 }
