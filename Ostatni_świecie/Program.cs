@@ -1,4 +1,4 @@
-﻿using System;
+z ﻿using System;
 
 namespace Ostatni_świecie
 {
@@ -6,7 +6,7 @@ namespace Ostatni_świecie
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine(" Test z git huba");
         }
     }
 }
