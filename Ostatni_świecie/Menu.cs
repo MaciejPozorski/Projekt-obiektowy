@@ -9,6 +9,7 @@ namespace Ostatni_świecie
         public bool intro = true;
         public void MainMenu()
         {
+            Save sv = new Save();
             int start = 0;
             
             if(intro == true)
@@ -51,7 +52,7 @@ namespace Ostatni_świecie
                             Console.Clear();
                             break;
                         case 5:
-                            Console.Clear();
+                            sv.SaveStats(batery, km);
                             break;
                         case 6:
                             start++;
