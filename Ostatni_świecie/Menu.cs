@@ -4,9 +4,20 @@ namespace Ostatni_świecie
 {
     class Menu
     {
+        public int batery = 100;
+        public int km = 0;
+        public bool intro = true;
         public void MainMenu()
         {
             int start = 0;
+            
+            if(intro == true)
+            {
+                Console.WriteLine("Tu pojawia się otoczka fabularna ;)");
+                Console.WriteLine("Wciśnij dowolny przycisk, aby kontynuować.");
+                Console.ReadKey();
+                Console.Clear();
+            }
 
             while (start == 0)
             {
@@ -44,6 +55,7 @@ namespace Ostatni_świecie
                             break;
                         case 6:
                             start++;
+                            Console.Clear();
                             break;
                         default:
                             Console.Clear();
