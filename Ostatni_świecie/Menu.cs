@@ -22,6 +22,7 @@ namespace Ostatni_świecie
 
             while (start == 0)
             {
+                Console.WriteLine(" Bateria: {0}, Przebyte km: {1}",batery, km);
                 Console.WriteLine("|==============================|");
                 Console.WriteLine("|          1. Podróż           |");
                 Console.WriteLine("|     2. Ładowanie baterii     |");

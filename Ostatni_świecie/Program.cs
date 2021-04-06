@@ -7,6 +7,7 @@ namespace Ostatni_świecie
         static void Main(string[] args)
         {
             Menu game = new Menu();
+            Load ld = new Load();
 
             int start = 0;
 
@@ -30,6 +31,7 @@ namespace Ostatni_świecie
                     {
                         case 1:
                             Console.Clear();
+                            
                             game.intro = true;
                             game.MainMenu();
                             Console.Clear();
@@ -37,7 +39,9 @@ namespace Ostatni_świecie
                         case 2:
                             Console.Clear();
                             game.intro = false;
+                            ld.LoadStats();
                             game.MainMenu();
+                            
                             break;
                         case 3:
                             Console.Clear();
