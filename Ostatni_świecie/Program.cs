@@ -17,7 +17,6 @@ namespace Ostatni_świecie
                 Console.WriteLine("|          4. Autorzy          |");
                 Console.WriteLine("|           5. Wyjdź           |");
                 Console.WriteLine("|==============================|");
-                //testowy dopisek
                 Console.WriteLine("Wybierz opcję: ");
 
                 switch (int.Parse(Console.ReadLine()))
@@ -40,7 +39,6 @@ namespace Ostatni_świecie
                         Console.WriteLine("Wciśnij dowolny przycisk, aby wrócić do menu.");
                         Console.ReadKey();
                         Console.Clear();
-                        // testowy dopisek
                         break;
                     case 5:
                         start++;
