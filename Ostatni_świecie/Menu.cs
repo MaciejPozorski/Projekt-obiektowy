@@ -52,6 +52,7 @@ namespace Ostatni_świecie
                             Console.Clear();
                             break;
                         case 5:
+                            Console.Clear();
                             sv.SaveStats(batery, km);
                             break;
                         case 6:
