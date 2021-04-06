@@ -17,7 +17,7 @@ namespace Ostatni_świecie
                 Console.WriteLine("|          4. Autorzy          |");
                 Console.WriteLine("|           5. Wyjdź           |");
                 Console.WriteLine("|==============================|");
-
+                //testowy dopisek
                 Console.WriteLine("Wybierz opcję: ");
 
                 switch (int.Parse(Console.ReadLine()))
