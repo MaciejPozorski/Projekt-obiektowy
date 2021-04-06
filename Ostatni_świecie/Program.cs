@@ -6,7 +6,7 @@ namespace Ostatni_świecie
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(" Test z git huba");
+            Console.WriteLine(" !!! z vs maciej");
         }
     }
 }
