@@ -40,6 +40,7 @@ namespace Ostatni_świecie
                         Console.WriteLine("Wciśnij dowolny przycisk, aby wrócić do menu.");
                         Console.ReadKey();
                         Console.Clear();
+                        // testowy dopisek
                         break;
                     case 5:
                         start++;
