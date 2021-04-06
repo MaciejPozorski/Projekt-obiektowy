@@ -6,7 +6,7 @@ namespace Ostatni_świecie
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(" zmiana z githuba");
+            Console.WriteLine(" zmiana z vs maciej");
         }
     }
 }
