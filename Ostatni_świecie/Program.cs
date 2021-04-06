@@ -6,6 +6,8 @@ namespace Ostatni_świecie
     {
         static void Main(string[] args)
         {
+            Menu game = new Menu();
+
             int start = 0;
 
             while (start == 0)
@@ -17,18 +19,27 @@ namespace Ostatni_świecie
                 Console.WriteLine("|          4. Autorzy          |");
                 Console.WriteLine("|           5. Wyjdź           |");
                 Console.WriteLine("|==============================|");
-                //testowy dopisek
+                
                 Console.WriteLine("Wybierz opcję: ");
 
                 switch (int.Parse(Console.ReadLine()))
                 {
                     case 1:
                         Console.Clear();
+                        game.MenuGlowne();
+                        Console.Clear();
                         break;
                     case 2:
                         Console.Clear();
                         break;
                     case 3:
+                        Console.Clear();
+                        Console.WriteLine("|==============================|");
+                        Console.WriteLine("|   Tu kiedyś będą zasady ;)   |");
+                        Console.WriteLine("|                              |");
+                        Console.WriteLine("|==============================|");
+                        Console.WriteLine("Wciśnij dowolny przycisk, aby wrócić do menu.");
+                        Console.ReadKey();
                         Console.Clear();
                         break;
                     case 4:
@@ -40,7 +51,6 @@ namespace Ostatni_świecie
                         Console.WriteLine("Wciśnij dowolny przycisk, aby wrócić do menu.");
                         Console.ReadKey();
                         Console.Clear();
-                        // testowy dopisek
                         break;
                     case 5:
                         start++;
