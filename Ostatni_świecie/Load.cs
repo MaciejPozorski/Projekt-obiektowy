@@ -9,14 +9,13 @@ namespace Ostatni_świecie
     {
         public void LoadStats()
         {
-            string path = "stats.txt";
             Menu game = new Menu();
+            string path = "stats.txt";           
             string[] read = File.ReadAllLines(path);
             game.batery = Convert.ToInt32(read[0]);
             game.km = Convert.ToInt32(read[1]);
+            Console.WriteLine(game.batery);    
             Console.WriteLine(game.km);
-            Console.WriteLine(game.batery);
-            
         }
     }
 }
