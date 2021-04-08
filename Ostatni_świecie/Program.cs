@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace Ostatni_świecie
 {
@@ -7,6 +8,7 @@ namespace Ostatni_świecie
         static void Main(string[] args)
         {
             Menu game = new Menu();
+            Load ld = new Load();
 
             int start = 0;
 
@@ -30,6 +32,7 @@ namespace Ostatni_świecie
                     {
                         case 1:
                             Console.Clear();
+                            
                             game.intro = true;
                             game.MainMenu();
                             Console.Clear();
@@ -37,7 +40,13 @@ namespace Ostatni_świecie
                         case 2:
                             Console.Clear();
                             game.intro = false;
+                            //ld.LoadStats();
+                            string path = "stats.txt";
+                            string[] read = File.ReadAllLines(path);
+                            game.batery = Convert.ToInt32(read[0]);
+                            game.km = Convert.ToInt32(read[1]);                          
                             game.MainMenu();
+                            
                             break;
                         case 3:
                             Console.Clear();

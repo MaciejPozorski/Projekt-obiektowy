@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace Ostatni_świecie
 {
@@ -9,6 +11,8 @@ namespace Ostatni_świecie
         public bool intro = true;
         public void MainMenu()
         {
+            Save sv = new Save();
+            Charging ch = new Charging();
             int start = 0;
             
             if(intro == true)
@@ -21,6 +25,7 @@ namespace Ostatni_świecie
 
             while (start == 0)
             {
+                Console.WriteLine(" Bateria: {0}, Przebyte km: {1}",batery, km);
                 Console.WriteLine("|==============================|");
                 Console.WriteLine("|          1. Podróż           |");
                 Console.WriteLine("|     2. Ładowanie baterii     |");
@@ -43,6 +48,8 @@ namespace Ostatni_świecie
                             break;
                         case 2:
                             Console.Clear();
+                            ch.ChargeBatteries();
+                            Console.Clear();
                             break;
                         case 3:
                             Console.Clear();
@@ -52,6 +59,7 @@ namespace Ostatni_świecie
                             break;
                         case 5:
                             Console.Clear();
+                            sv.SaveStats();
                             break;
                         case 6:
                             start++;
