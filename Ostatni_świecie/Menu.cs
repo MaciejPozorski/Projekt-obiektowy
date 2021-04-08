@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace Ostatni_świecie
 {
@@ -10,6 +12,7 @@ namespace Ostatni_świecie
         public void MainMenu()
         {
             Save sv = new Save();
+            Charging ch = new Charging();
             int start = 0;
             
             if(intro == true)
@@ -44,6 +47,8 @@ namespace Ostatni_świecie
                             Console.Clear();
                             break;
                         case 2:
+                            Console.Clear();
+                            ch.ChargeBatteries();
                             Console.Clear();
                             break;
                         case 3:
