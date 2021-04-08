@@ -9,6 +9,6 @@ namespace Ostatni_świecie
     {
         string path = @"Stats.txt";
         StreamWriter sw;
-        switch = File
+        //switch = File
     }
 }
