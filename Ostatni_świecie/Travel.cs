@@ -7,7 +7,7 @@ namespace Ostatni_świecie
     class Travel
     {
         
-        public void Traveling(ref int batery, ref int km)
+        public void Traveling(ref int batery, ref int km, ref bool repair, ref int repair_cost)
         {
             bool start = true;
 
@@ -36,7 +36,7 @@ namespace Ostatni_świecie
                     }
                     else
                     {
-                        Random(ref batery);
+                        Random(ref batery, ref repair, ref repair_cost);
 
                         km += time * 10;
                         batery -= time * 10;
@@ -55,13 +55,13 @@ namespace Ostatni_świecie
 
             }
         }
-        public void Animation(ref int batery, int draw, int draw_time) // draw_time = moment w którym ma się odpalić event w czasie podróży 
+        public void Animation(ref int batery, int draw, int draw_time, ref bool repair, ref int repair_cost) // draw_time = moment w którym ma się odpalić event w czasie podróży 
         {
             Events events = new Events();
             //Animacja
-            events.DrawEvent(ref batery, draw);
+            events.DrawEvent(ref batery, draw, ref repair, ref repair_cost);
         }
-        public void Random(ref int batery)
+        public void Random(ref int batery, ref bool repair, ref int repair_cost)
         {
             Random random = new Random();
             
@@ -71,7 +71,7 @@ namespace Ostatni_świecie
             {
                 int draw_time = random.Next(10) + 1;
 
-                Animation(ref batery, draw, draw_time);
+                Animation(ref batery, draw, draw_time, ref repair, ref repair_cost);
             }
         }
     }
