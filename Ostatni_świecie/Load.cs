@@ -12,7 +12,7 @@ namespace Ostatni_świecie
         {
             
             string path = "stats.txt";           
-            string[] read = File.ReadAllLines(path);
+            string[] read = File.ReadAllLines(path); 
             batery = Convert.ToInt32(read[0]);
             km = Convert.ToInt32(read[1]);
         }

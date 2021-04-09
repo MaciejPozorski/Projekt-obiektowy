@@ -38,6 +38,8 @@ namespace Ostatni_świecie
                     {
                         Random(ref batery);
 
+                        km += time * 10;
+                        batery -= time * 10;
                         start = false;
                         Console.Clear();
                     }
@@ -53,20 +55,23 @@ namespace Ostatni_świecie
 
             }
         }
-        public void Animation()
+        public void Animation(ref int batery, int draw, int draw_time) // draw_time = moment w którym ma się odpalić event w czasie podróży 
         {
-            
+            Events events = new Events();
+            //Animacja
+            events.DrawEvent(ref batery, draw);
         }
         public void Random(ref int batery)
         {
             Random random = new Random();
-            Events events = new Events();
-
+            
             int draw = random.Next(2);
 
             if(draw != 0)
             {
-                events.DrawEvent(ref batery, draw);
+                int draw_time = random.Next(10) + 1;
+
+                Animation(ref batery, draw, draw_time);
             }
         }
     }
