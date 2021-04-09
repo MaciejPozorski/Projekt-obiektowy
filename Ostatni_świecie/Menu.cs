@@ -11,7 +11,7 @@ namespace Ostatni_świecie
         public bool intro = true;
         public void MainMenu()
         {
-
+            Travel travel = new Travel();
             Save sv = new Save();
             Charging ch = new Charging();
             int start = 0;
@@ -46,6 +46,7 @@ namespace Ostatni_świecie
                     {
                         case 1:
                             Console.Clear();
+                            travel.Traveling();
                             break;
                         case 2:
                             Console.Clear();
