@@ -6,12 +6,12 @@ namespace Ostatni_świecie
 {
     class Menu
     {
-        public int batery = 100;
+        public int batery = 80;
         public int km = 0;
         public bool intro = true;
         public void MainMenu()
         {
-
+            Travel travel = new Travel();
             Save sv = new Save();
             Charging ch = new Charging();
             Start st = new Start();
@@ -47,6 +47,7 @@ namespace Ostatni_świecie
                     {
                         case 1:
                             Console.Clear();
+                            travel.Traveling();
                             break;
                         case 2:
                             Console.Clear();

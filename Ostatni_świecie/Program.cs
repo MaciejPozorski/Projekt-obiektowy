@@ -32,7 +32,6 @@ namespace Ostatni_świecie
                     {
                         case 1:
                             Console.Clear();
-                            
                             game.intro = true;
                             game.MainMenu();
                             Console.Clear();
