@@ -14,7 +14,7 @@ namespace Ostatni_świecie
             Travel travel = new Travel();
             Save sv = new Save();
             Charging ch = new Charging();
-            int start = 0;
+            bool start = true;
             
             if(intro == true)
             {
@@ -24,7 +24,7 @@ namespace Ostatni_świecie
                 Console.Clear();
             }
 
-            while (start == 0)
+            while (start == true)
             {
                 Console.WriteLine(" Bateria: {0}, Przebyte km: {1}",batery, km);
                 Console.WriteLine("|==============================|");
@@ -33,7 +33,7 @@ namespace Ostatni_świecie
                 Console.WriteLine("|         3. Warsztat          |");
                 Console.WriteLine("|          4. Naprawa          |");
                 Console.WriteLine("|          5. Zapisz           |");
-                Console.WriteLine("|           6. Wyjdź           |");
+                Console.WriteLine("|           0. Wyjdź           |");
                 Console.WriteLine("|==============================|");
 
                 Console.WriteLine("Wybierz opcję: ");
@@ -46,7 +46,7 @@ namespace Ostatni_świecie
                     {
                         case 1:
                             Console.Clear();
-                            travel.Traveling();
+                            travel.Traveling(ref batery, ref km);
                             break;
                         case 2:
                             Console.Clear();
@@ -63,8 +63,8 @@ namespace Ostatni_świecie
                             Console.Clear();
                             sv.SaveStats();
                             break;
-                        case 6:
-                            start++;
+                        case 0:
+                            start = false;
                             Console.Clear();
                             break;
                         default:
