@@ -14,17 +14,18 @@ namespace Ostatni_świecie
             Travel travel = new Travel();
             Save sv = new Save();
             Charging ch = new Charging();
-            bool start = true;
+            Start st = new Start();
+            int start = 0;
             
             if(intro == true)
             {
-                Console.WriteLine("Tu pojawia się otoczka fabularna ;)");
+                st.AtlasIntro();
                 Console.WriteLine("Wciśnij dowolny przycisk, aby kontynuować.");
                 Console.ReadKey();
                 Console.Clear();
             }
 
-            while (start == true)
+            while (start == 0)
             {
                 Console.WriteLine(" Bateria: {0}, Przebyte km: {1}",batery, km);
                 Console.WriteLine("|==============================|");
@@ -33,7 +34,7 @@ namespace Ostatni_świecie
                 Console.WriteLine("|         3. Warsztat          |");
                 Console.WriteLine("|          4. Naprawa          |");
                 Console.WriteLine("|          5. Zapisz           |");
-                Console.WriteLine("|           0. Wyjdź           |");
+                Console.WriteLine("|           6. Wyjdź           |");
                 Console.WriteLine("|==============================|");
 
                 Console.WriteLine("Wybierz opcję: ");
@@ -46,7 +47,7 @@ namespace Ostatni_świecie
                     {
                         case 1:
                             Console.Clear();
-                            travel.Traveling(ref batery, ref km);
+                            travel.Traveling();
                             break;
                         case 2:
                             Console.Clear();
@@ -63,8 +64,8 @@ namespace Ostatni_świecie
                             Console.Clear();
                             sv.SaveStats();
                             break;
-                        case 0:
-                            start = false;
+                        case 6:
+                            start++;
                             Console.Clear();
                             break;
                         default:
