@@ -25,21 +25,22 @@ namespace Ostatni_świecie
                 Thread.Sleep(100);
             }
             Console.Clear();
-            Console.Write("        ############         ");
-            Console.Write("     #################       ");
-            Console.Write("    #####################      ");
-            Console.Write("    ######################     ");
-            Console.Write("   #########################    ");
-            Console.Write("  ###########################   ");
-            Console.Write("");
-            Console.Write("");
-            Console.Write("");
-            Console.Write("");
-            Console.Write("");
-            Console.Write("");
-            Console.Write("");
-            Console.Write("");
 
+            Console.Write("  #############################   \n");
+            Console.Write("  #############   #############   \n");
+            Console.Write("  ###########   #   ###########   \n");
+            Console.Write("  ##########   ###   ##########   \n");
+            Console.Write("  #########   #####   #########   \n");
+            Console.Write("  #######                ######   \n");
+            Console.Write("  #######   #########   #######   \n");
+            Console.Write("  ######   ###########   ######   \n");
+            Console.Write("  #####   #############   #####   \n");
+            Console.Write("  ####   ###############   ####   \n");
+            Console.Write("  ##     ###############     ##   \n");
+            Console.Write("  #############################   \n");
+            Thread.Sleep(2000);
+            Console.Clear();
+            Console.WriteLine("Witaj w programie kontroli lotu międzygalaktycznego Atlas");
         }
     }
 }
