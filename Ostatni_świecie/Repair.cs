@@ -6,5 +6,6 @@ namespace Ostatni_świecie
 {
     class Repair
     {
+        
     }
 }
