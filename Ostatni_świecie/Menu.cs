@@ -6,7 +6,7 @@ namespace Ostatni_świecie
 {
     class Menu
     {
-        public int batery = 100;
+        public int batery = 80;
         public int km = 0;
         public bool intro = true;
         public void MainMenu()

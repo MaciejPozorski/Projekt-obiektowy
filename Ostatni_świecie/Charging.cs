@@ -20,7 +20,9 @@ namespace Ostatni_świecie
                 try
                 {
                     int time = Convert.ToInt32(Console.ReadLine());
-                   g.batery += 10 * time;
+                    //g.batery += 10 * time;
+                    Console.WriteLine(time);
+                    g.batery = time;
                     if (g.batery>100)
                     {
                         g.batery = 100;
