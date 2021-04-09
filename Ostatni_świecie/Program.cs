@@ -40,11 +40,7 @@ namespace Ostatni_świecie
                         case 2:
                             Console.Clear();
                             game.intro = false;
-                            ld.LoadStats();
-                            string path = "stats.txt";
-                            string[] read = File.ReadAllLines(path);
-                            game.batery = Convert.ToInt32(read[0]);
-                            game.km = Convert.ToInt32(read[1]);                          
+                            ld.LoadStats(ref game.batery, ref game.km);                         
                             game.MainMenu();
                             
                             break;

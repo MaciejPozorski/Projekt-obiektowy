@@ -11,6 +11,7 @@ namespace Ostatni_świecie
         public bool intro = true;
         public void MainMenu()
         {
+
             Save sv = new Save();
             Charging ch = new Charging();
             int start = 0;
@@ -48,7 +49,7 @@ namespace Ostatni_świecie
                             break;
                         case 2:
                             Console.Clear();
-                            ch.ChargeBatteries();
+                            ch.ChargeBatteries(ref batery);
                             Console.Clear();
                             break;
                         case 3:
