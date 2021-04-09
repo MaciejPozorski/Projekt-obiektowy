@@ -9,7 +9,6 @@ namespace Ostatni_świecie
         public int batery = 0;
         public int km = 0;
         public bool intro = true;
-        public bool repair = false;
         public int repair_cost = 0;
 
         public void MainMenu()
@@ -18,6 +17,7 @@ namespace Ostatni_świecie
             Save sv = new Save();
             Charging ch = new Charging();
             Start st = new Start();
+            Repair repair = new Repair();
             bool start = true;
             
             if(intro == true)
@@ -50,7 +50,7 @@ namespace Ostatni_świecie
                     {
                         case 1:
                             Console.Clear();
-                            travel.Traveling(ref batery, ref km, ref repair, ref repair_cost);
+                            travel.Traveling(ref batery, ref km, ref repair_cost);
                             break;
                         case 2:
                             Console.Clear();
@@ -61,6 +61,7 @@ namespace Ostatni_świecie
                             Console.Clear();
                             break;
                         case 4:
+                            
                             Console.Clear();
                             break;
                         case 5:
