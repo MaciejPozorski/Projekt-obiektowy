@@ -12,18 +12,27 @@ namespace Ostatni_świecie
             while (check == true)
             {
 
-                Console.Write("|===============================|\n");
-                Console.Write("| Podaj czas ładowania baterii: |\n");
-                Console.Write("|===============================|\n");
+                Console.Write("|==========================================|\n");
+                Console.Write("| Podaj czas ładowania baterii (Exit = 0): |\n");
+                Console.Write("|==========================================|\n");
+
                 try
                 {
                     int time = Convert.ToInt32(Console.ReadLine());
-                   batery += 10 * time;
-                    if (batery>100)
+                   
+                    if(time == 0)
                     {
-                        batery = 100;
+                        check = false;
                     }
-                    check = false;
+                    else
+                    {
+                        batery += 10 * time;
+                        if (batery > 100)
+                        {
+                            batery = 100;
+                        }
+                        check = false;
+                    }
                 }
                 catch (System.FormatException)
                 {

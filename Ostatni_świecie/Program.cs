@@ -10,16 +10,16 @@ namespace Ostatni_świecie
             Menu game = new Menu();
             Load ld = new Load();
 
-            int start = 0;
+            bool start = true;
 
-            while (start == 0)
+            while (start == true)
             {
                 Console.WriteLine("|==============================|");
                 Console.WriteLine("|         1. Nowa gra          |");
                 Console.WriteLine("|        2. Wczytaj grę        |");
                 Console.WriteLine("|    3. Zasady i informacje    |");
                 Console.WriteLine("|          4. Autorzy          |");
-                Console.WriteLine("|           5. Wyjdź           |");
+                Console.WriteLine("|           0. Wyjdź           |");
                 Console.WriteLine("|==============================|");
                 
                 Console.WriteLine("Wybierz opcję: ");
@@ -63,8 +63,8 @@ namespace Ostatni_świecie
                             Console.ReadKey();
                             Console.Clear();
                             break;
-                        case 5:
-                            start++;
+                        case 0:
+                            start = false;
                             break;
                         default:
                             Console.Clear();
