@@ -14,11 +14,12 @@ namespace Ostatni_świecie
 
             Save sv = new Save();
             Charging ch = new Charging();
+            Start st = new Start();
             int start = 0;
             
             if(intro == true)
             {
-                Console.WriteLine("Tu pojawia się otoczka fabularna ;)");
+                st.AtlasIntro();
                 Console.WriteLine("Wciśnij dowolny przycisk, aby kontynuować.");
                 Console.ReadKey();
                 Console.Clear();
