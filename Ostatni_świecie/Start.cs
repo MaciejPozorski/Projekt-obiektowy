@@ -28,14 +28,19 @@ namespace Ostatni_świecie
 
             Console.Write("  #############################   \n");
             Console.Write("  #############   #############   \n");
+            Thread.Sleep(200);
             Console.Write("  ###########   #   ###########   \n");
             Console.Write("  ##########   ###   ##########   \n");
+            Thread.Sleep(200);
             Console.Write("  #########   #####   #########   \n");
             Console.Write("  #######                ######   \n");
+            Thread.Sleep(200);
             Console.Write("  #######   #########   #######   \n");
             Console.Write("  ######   ###########   ######   \n");
+            Thread.Sleep(200);
             Console.Write("  #####   #############   #####   \n");
             Console.Write("  ####   ###############   ####   \n");
+            Thread.Sleep(200);
             Console.Write("  ##     ###############     ##   \n");
             Console.Write("  #############################   \n");
             Thread.Sleep(2000);
