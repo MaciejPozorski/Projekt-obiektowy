@@ -6,11 +6,15 @@ namespace Ostatni_świecie
 {
     class Menu
     {
-        public int batery = 0;
+        public int batery = 100;
+        public int sila = 100;
         public int km = 0;
         public bool intro = true;
         public int repair_cost = 0;
+        public void wczytaj()
+        {
 
+        }
         public void MainMenu()
         {
             Travel travel = new Travel();
@@ -50,7 +54,7 @@ namespace Ostatni_świecie
                     {
                         case 1:
                             Console.Clear();
-                            travel.Traveling(ref batery, ref km, ref repair_cost);
+                            travel.Traveling(ref batery, ref km);
                             break;
                         case 2:
                             Console.Clear();

@@ -60,6 +60,7 @@ namespace Ostatni_świecie
                             Console.WriteLine("|==============================|");
                             Console.WriteLine("|       Maciej Pozorski        |");
                             Console.WriteLine("|     Przemysław Szymański     |");
+                            Console.WriteLine("|       Jakub Wachowicz        |" );
                             Console.WriteLine("|==============================|");
                             Console.WriteLine("Wciśnij dowolny przycisk, aby wrócić do menu.");
                             Console.ReadKey();

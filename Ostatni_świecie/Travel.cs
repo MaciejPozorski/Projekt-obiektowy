@@ -7,11 +7,12 @@ namespace Ostatni_świecie
     class Travel
     {
         
-        public void Traveling(ref int batery, ref int km, ref int repair_cost)
+      
+        public void Traveling(ref int batery, ref int km)
         {
             bool start = true;
-
-            while(start == true)
+            TravelLoop tl = new TravelLoop();
+            while (start == true)
             {
                 Console.Clear();
                 Console.WriteLine("|================================|");
@@ -20,26 +21,24 @@ namespace Ostatni_świecie
 
                 try
                 {
-                    int time = Convert.ToInt32(Console.ReadLine());
+                     int time = Convert.ToInt32(Console.ReadLine());
 
-                    if(time >= (batery / 10))
+                    if (time >= (batery / 10))
                     {
                         Console.Clear();
                         Console.WriteLine("Nie masz wystarczająco energii! Wciśnij dowolny przycisk i spróbuj ponownie.");
                         Console.ReadKey();
                         Console.Clear();
                     }
-                    else if(time == 0)
+                    else if (time == 0)
                     {
                         start = false;
                         Console.Clear();
                     }
                     else
                     {
-                        Random(ref batery, ref repair_cost);
-
-                        km += time * 10;
-                        batery -= time * 10;
+                        tl.tLoop(ref km, ref batery, ref time);
+                        
                         start = false;
                         Console.Clear();
                     }
@@ -55,24 +54,6 @@ namespace Ostatni_świecie
 
             }
         }
-        public void Animation(ref int batery, int draw, int draw_time, ref int repair_cost) // draw_time = moment w którym ma się odpalić event w czasie podróży 
-        {
-            Events events = new Events();
-            //Animacja
-            events.DrawEvent(ref batery, draw, ref repair_cost);
-        }
-        public void Random(ref int batery, ref int repair_cost)
-        {
-            Random random = new Random();
-            
-            int draw = random.Next(2);
 
-            if(draw != 0)
-            {
-                int draw_time = random.Next(10) + 1;
-
-                Animation(ref batery, draw, draw_time, ref repair_cost);
-            }
-        }
     }
 }
