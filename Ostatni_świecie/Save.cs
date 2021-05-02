@@ -10,16 +10,16 @@ namespace Ostatni_świecie
 {
     class Save
     {
-        public void SaveStats()
+        public void SaveStats(ref int batery, ref int km)
         {
             Menu game = new Menu();
             string path = @"stats.txt";
              using (StreamWriter sw = File.CreateText(path))
              {
 
-                     sw.Write(game.batery);
+                     sw.Write(batery);
                      sw.WriteLine("");
-                     sw.Write(game.km);
+                     sw.Write(km);
 
              } 
         

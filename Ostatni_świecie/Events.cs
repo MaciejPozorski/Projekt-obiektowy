@@ -7,11 +7,20 @@ namespace Ostatni_świecie
     class Events
     {
 
-        public void draw(ref bool repairCheck)
+        public void draw(ref int repairCost)
         {
-
-           repairCheck = true;
+            Random random = new Random();
             
+        }
+        struct eventt
+        {
+            private string text;
+            private int cost;
+            public void loadEvent(string te, int co)
+            {
+                text = te;
+                cost = co;
+            }
         }
     }
 }

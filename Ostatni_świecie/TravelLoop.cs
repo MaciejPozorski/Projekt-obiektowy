@@ -8,19 +8,18 @@ namespace Ostatni_świecie
     {
        
         
-        public void tLoop(ref int km, ref int batery, ref int time)
+        public void tLoop(ref int km, ref int batery, ref int time, ref int repairCost)
         {
 
-            bool repairCheck=false;
             int check = 0;
             Travel travel = new Travel();
             Events events = new Events();
             Menu menu = new Menu();
-            while (check <time)
+            while (check <time && repairCost != 0)
             {
                 check++;
-                events.draw(ref repairCheck);
-                if (repairCheck==false)
+                events.draw(ref repairCost);
+                if (repairCost != 0)
                 {
                     km =km+  1000;
                     batery =batery - 10;

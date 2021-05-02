@@ -8,7 +8,7 @@ namespace Ostatni_świecie
     {
         
       
-        public void Traveling(ref int batery, ref int km)
+        public void Traveling(ref int batery, ref int km,ref int strenght, ref int repairCost)
         {
             bool start = true;
             TravelLoop tl = new TravelLoop();
@@ -37,7 +37,7 @@ namespace Ostatni_świecie
                     }
                     else
                     {
-                        tl.tLoop(ref km, ref batery, ref time);
+                        tl.tLoop(ref km, ref batery, ref time, ref repairCost);
                         
                         start = false;
                         Console.Clear();
