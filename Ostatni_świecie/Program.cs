@@ -32,16 +32,14 @@ namespace Ostatni_świecie
                     {
                         case 1:
                             Console.Clear();
-                            game.intro = true;
-                            game.batery = 100;
-                            game.km = 0;
+                            game.intro = true;                           
                             game.MainMenu();
                             Console.Clear();
                             break;
                         case 2:
                             Console.Clear();
                             game.intro = false;
-                            ld.LoadStats(ref game.batery, ref game.km);                         
+                            ld.LoadStats();                         
                             game.MainMenu();
                             
                             break;

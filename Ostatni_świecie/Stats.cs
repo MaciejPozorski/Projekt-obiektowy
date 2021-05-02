@@ -6,11 +6,11 @@ namespace Ostatni_świecie
 {
     class Stats
     {
-        int battery = 100;
-        int km = 0;
-        int strength = 100;
-        int repairCost = 0;
-        string witchEvent;
+        public int battery = 100;
+        public int km = 0;
+        public int strength = 100;
+        public int repairCost = 0;
+        public string witchEvent;
         //ZAŁADUJ
         public void LoadBattery(int bt)
         {
@@ -32,7 +32,7 @@ namespace Ostatni_świecie
         {
             witchEvent = we;
         }
-        public void LoadAll(int bt, int k,int st)
+        public void LoadAll(ref int bt, ref int k, ref int st)
         {
             battery = bt;
             km = k;
@@ -54,9 +54,9 @@ namespace Ostatni_świecie
 
         //WYŁADUJ
 
-        public void UnloadBattery(int bt)
+        public int UnloadBattery()
         {
-            bt=battery;
+            return battery;
         }
         public void UnloadKm(int k)
         {
@@ -74,7 +74,7 @@ namespace Ostatni_świecie
         {
             we=witchEvent;
         }
-        public void UnloadAll(int bt, int k, int st)
+        public void UnloadAll(out int bt, out int k,out int st)
         {
             bt = battery;
             k = km; ;
@@ -90,8 +90,8 @@ namespace Ostatni_świecie
             bt = battery;
             k = km; ;
             st = strength; ;
-            rc = repairCost;
-            we = witchEvent;
+            repairCost = rc;
+            witchEvent = we;
         }
 
     }

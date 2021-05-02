@@ -1,2 +1,5 @@
 linia 1: bateria
 linia 2: dystans
+linia 3: si³a
+linia 4: koszt naprawy
+linia 5: które zdarzenie

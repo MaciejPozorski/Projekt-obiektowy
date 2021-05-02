@@ -6,8 +6,12 @@ namespace Ostatni_świecie
 {
     class Charging
     {
-        public void ChargeBatteries(ref int batery)
+        int battery;
+        public void ChargeBatteries()
         {
+             
+            Stats stats = new Stats();
+           // stats.UnloadBattery(battery);
             bool check = true;
             while (check == true)
             {
@@ -26,11 +30,12 @@ namespace Ostatni_świecie
                     }
                     else
                     {
-                        batery += 10 * time;
-                        if (batery > 100)
+                        battery += 10 * time;
+                        if (battery > 100)
                         {
-                            batery = 100;
+                            battery = 100;
                         }
+                        stats.LoadBattery(battery);
                         check = false;
                     }
                 }

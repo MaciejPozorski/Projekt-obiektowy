@@ -6,17 +6,12 @@ namespace Ostatni_świecie
 {
     class Menu
     {
-        public int batery = 100;
-        public int km = 0;
-        public int strength = 100;
-        public int repairCost = 0;
-        public bool intro = true;        
+
+        public bool intro = true;
+        
+        bool start = true;
         
 
-        public void wczytaj()
-        {
-
-        }
         public void MainMenu()
         {
             Travel travel = new Travel();
@@ -24,7 +19,12 @@ namespace Ostatni_świecie
             Charging ch = new Charging();
             Start st = new Start();
             Repair repair = new Repair();
-            bool start = true;
+            Stats stats = new Stats();
+            int battery;
+        int km=2;
+        int strength=3;
+            stats.UnloadAll(out battery,out km, out strength);
+            
             
             if(intro == true)
             {
@@ -36,7 +36,7 @@ namespace Ostatni_świecie
 
             while (start == true)
             {
-                Console.WriteLine(" Bateria: {0}, Przebyte km: {1}",batery, km);
+                Console.WriteLine(" Bateria: {0}, Siła: {1} Przebyte km: {2}",battery,strength, km);
                 Console.WriteLine("|==============================|");
                 Console.WriteLine("|          1. Podróż           |");
                 Console.WriteLine("|     2. Ładowanie baterii     |");
@@ -56,11 +56,11 @@ namespace Ostatni_świecie
                     {
                         case 1:
                             Console.Clear();
-                            travel.Traveling(ref batery, ref km,ref repairCost);
+                           // travel.Traveling();
                             break;
                         case 2:
                             Console.Clear();
-                            ch.ChargeBatteries(ref batery);
+                            ch.ChargeBatteries();
                             Console.Clear();
                             break;
                         case 3:
@@ -72,7 +72,7 @@ namespace Ostatni_świecie
                             break;
                         case 5:
                             Console.Clear();
-                            sv.SaveStats(ref batery, ref km);
+                            sv.SaveStats();
                             break;
                         case 0:
                             start = false;
