@@ -13,10 +13,11 @@ namespace Ostatni_świecie
         Menu game = new Menu();
        // Stats stats = new Stats();
 
-        public void LoadStats()
+        public void LoadSave()
         {
-            Stats stats = new Stats();
-                int battery;
+            Stats stats2 = new Stats();
+            Stats stats = stats2;
+            int battery;
             int km;
             int strength;
             // int repairCost;
@@ -28,11 +29,9 @@ namespace Ostatni_świecie
             km = Convert.ToInt32(read[1]);
             strength = Convert.ToInt32(read[2]);
             //repairCost = Convert.ToInt32(read[3]);
-          //  witchEvent = read[4];
-stats.LoadAll(ref battery,ref  km,ref strength);
-            Console.WriteLine(stats.battery);
-            Console.WriteLine(stats.km);
-            Console.ReadLine();
+            //  witchEvent = read[4];
+            stats.battery = battery;
+            
         }
     }
 }

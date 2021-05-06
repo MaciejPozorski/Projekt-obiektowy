@@ -20,12 +20,7 @@ namespace Ostatni_świecie
             Start st = new Start();
             Repair repair = new Repair();
             Stats stats = new Stats();
-            int battery;
-        int km=2;
-        int strength=3;
-            stats.UnloadAll(out battery,out km, out strength);
-            
-            
+           
             if(intro == true)
             {
                 st.AtlasIntro();
@@ -36,7 +31,7 @@ namespace Ostatni_świecie
 
             while (start == true)
             {
-                Console.WriteLine(" Bateria: {0}, Siła: {1} Przebyte km: {2}",battery,strength, km);
+                Console.WriteLine(" Bateria: {0}, Siła: {1} Przebyte km: {2}", stats.battery, stats.strength, stats.km);
                 Console.WriteLine("|==============================|");
                 Console.WriteLine("|          1. Podróż           |");
                 Console.WriteLine("|     2. Ładowanie baterii     |");

@@ -39,7 +39,7 @@ namespace Ostatni_świecie
                         case 2:
                             Console.Clear();
                             game.intro = false;
-                            ld.LoadStats();                         
+                            ld.LoadSave();                         
                             game.MainMenu();
                             
                             break;

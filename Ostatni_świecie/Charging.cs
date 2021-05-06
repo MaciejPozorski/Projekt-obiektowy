@@ -35,7 +35,7 @@ namespace Ostatni_świecie
                         {
                             battery = 100;
                         }
-                        stats.LoadBattery(battery);
+                       // stats.LoadBattery(battery);
                         check = false;
                     }
                 }

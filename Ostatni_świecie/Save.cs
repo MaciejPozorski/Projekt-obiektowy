@@ -20,7 +20,7 @@ namespace Ostatni_świecie
 
             Stats stats = new Stats();
             Menu game = new Menu();
-            stats.UnloadAll(battery,km,strenght,repairCost,witchEvent);
+            //stats.UnloadAll(battery,km,strenght,repairCost,witchEvent);
             string path = @"stats.txt";
              using (StreamWriter sw = File.CreateText(path))
              {
