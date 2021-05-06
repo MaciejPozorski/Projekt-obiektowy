@@ -11,11 +11,11 @@ namespace Ostatni_świecie
         public static int Km { get; set; }
         public static int Strength { get; set; }
         public static int RepairCost { get; set; }
-        public string witchEvent;
+        public static string WitchEvent { get; set; }
 
 
-            
-       
+
+
 
     }
 }

@@ -19,8 +19,7 @@ namespace Ostatni_świecie
             Charging ch = new Charging();
             Start st = new Start();
             Repair repair = new Repair();
-            Stats stats;
-           // stats.Battery = 55;
+            string l = Stats.WitchEvent;
             
             
            
