@@ -7,10 +7,7 @@ namespace Ostatni_świecie
     {
         static void Main(string[] args)
         {
-            Menu game = new Menu();
-            Load ld = new Load();
            
-
             bool start = true;
 
             while (start == true)

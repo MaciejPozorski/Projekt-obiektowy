@@ -36,7 +36,7 @@ namespace Ostatni_świecie
                     }
                     else
                     {
-                        TravelLoop.tLoop(ref time);                      
+                        TravelLoop.tLoop(ref time);       //skaczemy do pętli od podróży razem z podanym przez nas czasem             
                         start = false;
                         Console.Clear();
                     }

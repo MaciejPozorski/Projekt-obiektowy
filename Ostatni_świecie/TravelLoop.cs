@@ -12,10 +12,10 @@ namespace Ostatni_świecie
         {
 
             int check = 0;
-            while (check <time &&  Stats.RepairCost == 0)
+            while (check <time &&  Stats.RepairCost == 0)  // sprawdzamy czy podróż powinna się skończyć, lub czy wystąpiła awaria
             {
                 check++;
-                Events.draw();
+                Events.draw();                           // losujemy event lub jego brak
                 if (Stats.RepairCost == 0)
                 {
                     Stats.Km +=  1000;
@@ -24,6 +24,7 @@ namespace Ostatni_świecie
                 else
                 {
                     Console.WriteLine("Awaria!");
+                    Console.WriteLine(Stats.WitchEvent);
                     Console.ReadLine();
                     
                 }

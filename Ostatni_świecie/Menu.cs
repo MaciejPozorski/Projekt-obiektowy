@@ -6,10 +6,9 @@ namespace Ostatni_świecie
 {
     class Menu
     {
-
         public static bool intro;
-        
 
+        // obiekty są stworzone statycznie, aby nie tworzyć ciągle niepotrzebnie nowych instancji 
         public static void MainMenu()
         {
 
