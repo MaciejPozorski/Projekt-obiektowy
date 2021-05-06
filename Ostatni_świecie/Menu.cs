@@ -19,7 +19,10 @@ namespace Ostatni_świecie
             Charging ch = new Charging();
             Start st = new Start();
             Repair repair = new Repair();
-            Stats stats = new Stats();
+            Stats stats;
+           // stats.Battery = 55;
+            
+            
            
             if(intro == true)
             {
@@ -31,7 +34,8 @@ namespace Ostatni_świecie
 
             while (start == true)
             {
-                Console.WriteLine(" Bateria: {0}, Siła: {1} Przebyte km: {2}", stats.battery, stats.strength, stats.km);
+                
+                Console.WriteLine(" Bateria: {0}, Siła: {1} Przebyte km: {2}", Stats.Battery, Stats.Strength, Stats.Km);
                 Console.WriteLine("|==============================|");
                 Console.WriteLine("|          1. Podróż           |");
                 Console.WriteLine("|     2. Ładowanie baterii     |");

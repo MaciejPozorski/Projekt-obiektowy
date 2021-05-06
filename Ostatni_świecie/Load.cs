@@ -15,8 +15,8 @@ namespace Ostatni_świecie
 
         public void LoadSave()
         {
-            Stats stats2 = new Stats();
-            Stats stats = stats2;
+            //Stats stats = new Stats();
+            
             int battery;
             int km;
             int strength;
@@ -25,12 +25,14 @@ namespace Ostatni_świecie
 
             string path = "stats.txt";           
             string[] read = File.ReadAllLines(path); 
-            battery = Convert.ToInt32(read[0]);
-            km = Convert.ToInt32(read[1]);
-            strength = Convert.ToInt32(read[2]);
+            Stats.Battery = Convert.ToInt32(read[0]);
+            Stats.Km = Convert.ToInt32(read[1]);
+            Stats.Strength = Convert.ToInt32(read[2]);
             //repairCost = Convert.ToInt32(read[3]);
             //  witchEvent = read[4];
-            stats.battery = battery;
+            //stats2.battery = battery;
+            //Stats stats = stats2;
+            
             
         }
     }

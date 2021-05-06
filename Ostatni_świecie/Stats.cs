@@ -7,12 +7,14 @@ namespace Ostatni_świecie
     class Stats
     {
 
-        public int battery { get; set; }
-        public int km { get; set; }
-        public int strength { get; set; }
-        public int repairCost { get; set; }
+        public static int Battery { get; set; }
+        public static int Km { get; set; }
+        public static int Strength { get; set; }
+        public static int RepairCost { get; set; }
         public string witchEvent;
-        
+
+
+            
        
 
     }

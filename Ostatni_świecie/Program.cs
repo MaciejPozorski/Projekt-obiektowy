@@ -9,6 +9,7 @@ namespace Ostatni_świecie
         {
             Menu game = new Menu();
             Load ld = new Load();
+           
 
             bool start = true;
 
