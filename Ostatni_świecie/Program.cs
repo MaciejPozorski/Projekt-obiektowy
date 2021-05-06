@@ -33,15 +33,13 @@ namespace Ostatni_świecie
                     {
                         case 1:
                             Console.Clear();
-                            game.intro = true;                           
-                            game.MainMenu();
+                            Menu.intro = true;                           
+                            Menu.MainMenu();
                             Console.Clear();
                             break;
                         case 2:
                             Console.Clear();
-                            game.intro = false;
-                            ld.LoadSave();                         
-                            game.MainMenu();
+                            Load.LoadSave();                         
                             
                             break;
                         case 3:

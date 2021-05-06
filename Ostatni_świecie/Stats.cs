@@ -6,7 +6,7 @@ namespace Ostatni_świecie
 {
     class Stats
     {
-
+        //ZMIENNE [POLA(?)] SĄ ZAPISANE Z DUŻEJ LITERY
         public static int Battery { get; set; }
         public static int Km { get; set; }
         public static int Strength { get; set; }

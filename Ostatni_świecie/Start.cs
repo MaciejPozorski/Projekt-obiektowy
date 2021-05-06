@@ -8,7 +8,7 @@ namespace Ostatni_świecie
 {
     class Start
     {
-        public void AtlasIntro()
+        public static void AtlasIntro()
         {
             for (int i = 0; i < 25; i++)
             {

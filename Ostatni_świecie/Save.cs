@@ -10,26 +10,18 @@ namespace Ostatni_świecie
 {
     class Save
     {
-        int battery;
-        int km;
-        int strenght;
-        int repairCost;
-        string witchEvent;
-        public void SaveStats()
+        public static void SaveStats()
         {
 
-            Stats stats = new Stats();
-            Menu game = new Menu();
-            //stats.UnloadAll(battery,km,strenght,repairCost,witchEvent);
             string path = @"stats.txt";
              using (StreamWriter sw = File.CreateText(path))
              {
 
-                sw.WriteLine(battery);
-                sw.WriteLine(km);
-                sw.WriteLine(strenght);
-                sw.WriteLine(repairCost);
-                sw.WriteLine(witchEvent);
+                sw.WriteLine(Stats.Battery);
+                sw.WriteLine(Stats.Km);
+                sw.WriteLine(Stats.Strength);
+                sw.WriteLine(Stats.RepairCost);
+                sw.WriteLine(Stats.WitchEvent);
              } 
         
             

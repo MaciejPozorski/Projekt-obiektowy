@@ -7,7 +7,7 @@ namespace Ostatni_świecie
     class Events
     {
 
-        public void draw(ref int repairCost)
+        public static void draw()
         {
             Random random = new Random();
             

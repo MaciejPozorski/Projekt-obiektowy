@@ -8,10 +8,9 @@ namespace Ostatni_świecie
     {
         
       
-        public void Traveling(ref int batery, ref int km,ref int strenght, ref int repairCost)
+        public static void Traveling()
         {
             bool start = true;
-            TravelLoop tl = new TravelLoop();
             while (start == true)
             {
                 Console.Clear();
@@ -23,7 +22,7 @@ namespace Ostatni_świecie
                 {
                      int time = Convert.ToInt32(Console.ReadLine());
 
-                    if (time >= (batery / 10))
+                    if (time >= (Stats.Battery / 10))
                     {
                         Console.Clear();
                         Console.WriteLine("Nie masz wystarczająco energii! Wciśnij dowolny przycisk i spróbuj ponownie.");
@@ -37,8 +36,7 @@ namespace Ostatni_świecie
                     }
                     else
                     {
-                        tl.tLoop(ref km, ref batery, ref time, ref repairCost);
-                        
+                        TravelLoop.tLoop(ref time);                      
                         start = false;
                         Console.Clear();
                     }

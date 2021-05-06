@@ -7,25 +7,18 @@ namespace Ostatni_świecie
     class Menu
     {
 
-        public bool intro = true;
-        
-        bool start = true;
+        public static bool intro;
         
 
-        public void MainMenu()
+        public static void MainMenu()
         {
-            Travel travel = new Travel();
-            Save sv = new Save();
-            Charging ch = new Charging();
-            Start st = new Start();
-            Repair repair = new Repair();
-            string l = Stats.WitchEvent;
+
+
+            bool start = true;   
             
-            
-           
             if(intro == true)
             {
-                st.AtlasIntro();
+                Start.AtlasIntro();
                 Console.WriteLine("Wciśnij dowolny przycisk, aby kontynuować.");
                 Console.ReadKey();
                 Console.Clear();
@@ -54,11 +47,11 @@ namespace Ostatni_świecie
                     {
                         case 1:
                             Console.Clear();
-                           // travel.Traveling();
+                           Travel.Traveling();
                             break;
                         case 2:
                             Console.Clear();
-                            ch.ChargeBatteries();
+                            Charging.ChargeBatteries();
                             Console.Clear();
                             break;
                         case 3:
@@ -70,7 +63,7 @@ namespace Ostatni_świecie
                             break;
                         case 5:
                             Console.Clear();
-                            sv.SaveStats();
+                            Save.SaveStats();
                             break;
                         case 0:
                             start = false;
