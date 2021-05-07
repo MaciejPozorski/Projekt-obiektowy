@@ -9,17 +9,22 @@ namespace Ostatni_świecie
 
         public static void draw()
         {
-            Random random = new Random();
+            Random random = new Random(); //ty będzie losowanie, prace trwają ale działka wzywa, dokończę w ten weekend
+            int draw = int.Parse(Console.ReadLine());
+            switch (draw)
+            {
+                case 1:
+                    Damage damage1 = new Damage(20, "awaria anteny");
+                    break;
+            }
             
         }
-        struct eventt
+       class Damage
         {
-            private string text;
-            private int cost;
-            public void loadEvent(string te, int co)
+            public Damage(int repairCost, string witchEvent)
             {
-                text = te;
-                cost = co;
+                Stats.RepairCost = repairCost;
+                Stats.WitchEvent = witchEvent;
             }
         }
     }
