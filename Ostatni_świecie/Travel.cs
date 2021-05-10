@@ -13,6 +13,14 @@ namespace Ostatni_świecie
             bool start = true;
             while (start == true)
             {
+                if (Stats.RepairCost != 0)
+                {
+                    Console.WriteLine("Nie mozęsz dokonać lotu.");
+                    Console.WriteLine(Stats.WitchEvent);
+                    Console.ReadLine();
+                    start = false;
+                    Console.Clear();
+                }
                 Console.Clear();
                 Console.WriteLine("|================================|");
                 Console.WriteLine("| Podaj czas podróży (Exit = 0): |");

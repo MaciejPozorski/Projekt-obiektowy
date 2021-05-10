@@ -20,7 +20,16 @@ namespace Ostatni_świecie
                 Stats.Km = Convert.ToInt32(read[1]);
                 Stats.Strength = Convert.ToInt32(read[2]);
                 Stats.RepairCost = Convert.ToInt32(read[3]);
-                Stats.WitchEvent = (string)read[4];
+                try
+                {
+                    Stats.WitchEvent = (string)read[4];
+                }
+                catch (System.IndexOutOfRangeException)
+                {
+                    Stats.WitchEvent = null;
+                    
+                }
+                
                 Menu.MainMenu(); 
                 Menu.intro = false;
             }

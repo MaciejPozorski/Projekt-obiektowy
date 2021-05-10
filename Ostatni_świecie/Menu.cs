@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 
 namespace Ostatni_świecie
 {
@@ -17,6 +18,11 @@ namespace Ostatni_świecie
             
             if(intro == true)
             {
+                Stats.Battery = 150;
+                Stats.Km = 0;
+                Stats.Strength = 100;
+                Stats.RepairCost = 0;
+                Stats.WitchEvent = null;
                 Start.AtlasIntro();
                 Console.WriteLine("Wciśnij dowolny przycisk, aby kontynuować.");
                 Console.ReadKey();
@@ -25,14 +31,28 @@ namespace Ostatni_świecie
 
             while (start == true)
             {
-                
-                Console.WriteLine(" Bateria: {0}, Siła: {1} Przebyte km: {2}", Stats.Battery, Stats.Strength, Stats.Km);
+                Console.Write("Bateria:");
+                Thread.Sleep(25);
+                for (int i = 0; i < Stats.Battery/10; i++)
+                {  
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.Write("#");
+                    Thread.Sleep(25);
+                }               
+                for (int i = 0; i < 15 - (Stats.Battery/10); i++)
+                {
+                    Console.ForegroundColor = ConsoleColor.Gray;
+                    Console.Write("#");
+                    Thread.Sleep(25);
+                }
+                Console.WriteLine("");
+                Console.ResetColor();
+                Console.WriteLine("Siła: {0} Przebyte km: {1}", Stats.Strength, Stats.Km);
                 Console.WriteLine("|==============================|");
                 Console.WriteLine("|          1. Podróż           |");
                 Console.WriteLine("|     2. Ładowanie baterii     |");
-                Console.WriteLine("|         3. Warsztat          |");
-                Console.WriteLine("|          4. Naprawa          |");
-                Console.WriteLine("|          5. Zapisz           |");
+                Console.WriteLine("|          3. Naprawa          |");
+                Console.WriteLine("|          4. Zapisz           |");
                 Console.WriteLine("|           0. Wyjdź           |");
                 Console.WriteLine("|==============================|");
 
@@ -55,12 +75,10 @@ namespace Ostatni_świecie
                             break;
                         case 3:
                             Console.Clear();
-                            break;
-                        case 4:
-                            
+                            Repair.RepairShip();
                             Console.Clear();
                             break;
-                        case 5:
+                        case 4:
                             Console.Clear();
                             Save.SaveStats();
                             break;

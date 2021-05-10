@@ -11,9 +11,17 @@ namespace Ostatni_świecie
         {
              
 
-            bool check = true;
-            while (check == true)
+            bool start = true;
+            while (start == true)
             {
+                if (Stats.RepairCost>=50)
+                {
+                    Console.WriteLine("Brak mocy! Nie możesz naładować baterii.");
+                    Console.WriteLine(Stats.WitchEvent);
+                    Console.ReadLine();
+                    Console.Clear();
+                    start = false;                   
+                }
 
                 Console.Write("|==========================================|\n");
                 Console.Write("| Podaj czas ładowania baterii (Exit = 0): |\n");
@@ -25,16 +33,16 @@ namespace Ostatni_świecie
                    
                     if(time == 0)
                     {
-                        check = false;
+                        start = false;
                     }
                     else
                     {
                         Stats.Battery += 10 * time;
-                        if (Stats.Battery > 100)
+                        if (Stats.Battery > 150)
                         {
-                            Stats.Battery = 100;
+                            Stats.Battery = 150;
                         }                      
-                        check = false;
+                        start = false;
                     }
                 }
                 catch (System.FormatException)
