@@ -11,8 +11,6 @@ namespace Ostatni_świecie
         public static void Traveling()
         {
             bool start = true;
-            while (start == true)
-            {
                 if (Stats.RepairCost != 0)
                 {
                     Console.WriteLine("Nie mozęsz dokonać lotu.");
@@ -21,6 +19,9 @@ namespace Ostatni_świecie
                     start = false;
                     Console.Clear();
                 }
+            while (start == true)
+            {
+
                 Console.Clear();
                 Console.WriteLine("|================================|");
                 Console.WriteLine("| Podaj czas podróży (Exit = 0): |");

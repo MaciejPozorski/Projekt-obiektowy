@@ -8,12 +8,9 @@ namespace Ostatni_świecie
     {
         
         public static void ChargeBatteries()
-        {
-             
+        {             
 
             bool start = true;
-            while (start == true)
-            {
                 if (Stats.RepairCost>=50)
                 {
                     Console.WriteLine("Brak mocy! Nie możesz naładować baterii.");
@@ -22,6 +19,9 @@ namespace Ostatni_świecie
                     Console.Clear();
                     start = false;                   
                 }
+            while (start == true)
+            {
+
 
                 Console.Write("|==========================================|\n");
                 Console.Write("| Podaj czas ładowania baterii (Exit = 0): |\n");
